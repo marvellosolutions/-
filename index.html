@@ -8,35 +8,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: #F9FAFB; }
-        .glow-radial { background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.22), transparent 70%); }
-        .glass-card { background: rgba(17, 24, 39, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .glass-card:hover { border-color: rgba(59, 130, 246, 0.4); box-shadow: 0 0 25px rgba(37, 99, 235, 0.15); }
-        .gradient-text { background: linear-gradient(135deg, #60A5FA, #93C5FD, #3B82F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .gradient-btn { background: linear-gradient(135deg, #2563EB, #1D4ED8); }
-        .gradient-btn:hover { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: #0f172a; 
+            color: #f8fafc; 
+        }
+        
+        /* Medium Dark Glossy Ambient Background */
+        .glossy-bg {
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(30, 58, 138, 0.5) 0%, transparent 40%),
+                radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.25) 0%, transparent 35%),
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.9) 0%, transparent 100%),
+                linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+
+        /* Glossy Glass Cards */
+        .glossy-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .glossy-card:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 12px 40px 0 rgba(14, 165, 233, 0.25), inset 0 1px 2px 0 rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Glossy Metallic Button */
+        .glossy-btn {
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #1d4ed8 100%);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+        }
+
+        .glossy-btn:hover {
+            background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #2563eb 100%);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+        }
+
+        .gradient-text { 
+            background: linear-gradient(135deg, #38bdf8, #60a5fa, #93c5fd); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
     </style>
 </head>
-<body class="glow-radial min-h-screen selection:bg-blue-500 selection:text-white">
+<body class="glossy-bg min-h-screen selection:bg-sky-500 selection:text-white">
 
     <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-gray-950/80 border-b border-gray-800/60">
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-slate-700/60 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <img src="marvello logo.jpg" alt="Marvello Solutions Logo" class="w-11 h-11 rounded-full border border-blue-500/40 object-cover shadow-md shadow-blue-500/30">
+                <img src="marvello logo.jpg" alt="Marvello Solutions Logo" class="w-11 h-11 rounded-full border border-sky-400/40 object-cover shadow-lg shadow-sky-500/20">
                 <div>
-                    <span class="text-xl font-extrabold tracking-tight">MARVELLO <span class="text-blue-500">SOLUTIONS</span></span>
-                    <span class="block text-[10px] text-gray-400 font-medium tracking-wider -mt-1 uppercase">Pvt Ltd • AI & Software</span>
+                    <span class="text-xl font-extrabold tracking-tight text-white">MARVELLO <span class="text-sky-400">SOLUTIONS</span></span>
+                    <span class="block text-[10px] text-slate-300 font-medium tracking-wider -mt-1 uppercase">Pvt Ltd • AI & Software</span>
                 </div>
             </div>
 
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
-                <a href="#ai-training" class="hover:text-blue-400 transition">AI Training</a>
-                <a href="#services" class="hover:text-blue-400 transition">Software Services</a>
-                <a href="#contact" class="hover:text-blue-400 transition">Contact Us</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-200">
+                <a href="#ai-training" class="hover:text-sky-400 transition">AI Training</a>
+                <a href="#services" class="hover:text-sky-400 transition">Software Services</a>
+                <a href="#contact" class="hover:text-sky-400 transition">Contact Us</a>
             </nav>
 
-            <a href="#contact" class="gradient-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-white shadow-lg shadow-blue-600/30 hover:scale-105 transition transform">
+            <a href="#contact" class="glossy-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition transform active:scale-95">
                 Partner With Us
             </a>
         </div>
@@ -44,30 +84,29 @@
 
     <!-- Hero Section -->
     <section class="max-w-6xl mx-auto px-6 pt-16 pb-20 text-center">
-        <!-- Prominent Emblem Logo Showcase -->
         <div class="flex justify-center mb-8">
-            <img src="marvello logo.jpg" alt="Marvello Solutions Emblem" class="w-36 h-36 md:w-44 md:h-44 rounded-full border-2 border-blue-500/40 object-cover shadow-2xl shadow-blue-500/30 hover:scale-105 transition transform">
+            <img src="marvello logo.jpg" alt="Marvello Solutions Emblem" class="w-36 h-36 md:w-44 md:h-44 rounded-full border-2 border-sky-400/50 object-cover shadow-2xl shadow-sky-500/30 hover:scale-105 transition transform">
         </div>
 
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-blue-400 border border-blue-500/30 mb-8">
-            <i class="fa-solid fa-wand-magic-sparkles text-blue-400"></i>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glossy-card text-xs font-semibold text-sky-300 border border-sky-400/30 mb-8">
+            <i class="fa-solid fa-wand-magic-sparkles text-sky-400"></i>
             Empowering Future Through Technology • AI-Based Training & Mentorship
         </div>
 
-        <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight leading-tight mb-8">
+        <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight leading-tight mb-8 text-white">
             Empowering Students with <span class="gradient-text">AI Skills</span><br>
             Building High-Impact <span class="gradient-text">Software Systems</span>
         </h1>
 
-        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">
+        <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-12">
             Marvello Solutions Pvt Ltd bridges the gap between academic education and modern industry demands through practical AI training workshops, custom website development, enterprise software, dynamic client proposals, and company portfolios.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#ai-training" class="w-full sm:w-auto gradient-btn px-8 py-4 rounded-xl text-base font-bold text-white shadow-xl shadow-blue-600/30 hover:scale-105 transition transform">
+            <a href="#ai-training" class="w-full sm:w-auto glossy-btn px-8 py-4 rounded-xl text-base font-bold text-white transition transform hover:scale-105">
                 Explore AI Training Programs <i class="fa-solid fa-arrow-right ml-2"></i>
             </a>
-            <a href="#services" class="w-full sm:w-auto glass-card px-8 py-4 rounded-xl text-base font-bold text-gray-200 hover:text-white hover:bg-gray-800/80 transition">
+            <a href="#services" class="w-full sm:w-auto glossy-card px-8 py-4 rounded-xl text-base font-bold text-slate-200 hover:text-white transition">
                 Our Software Services
             </a>
         </div>
@@ -76,38 +115,38 @@
     <!-- Pillar 1: AI Training for Students -->
     <section id="ai-training" class="max-w-7xl mx-auto px-6 py-16">
         <div class="text-center mb-16">
-            <h2 class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-3">Pillar #1 • Education & AI Skills</h2>
+            <h2 class="text-xs font-bold text-sky-400 uppercase tracking-widest mb-3">Pillar #1 • Education & AI Skills</h2>
             <p class="text-3xl md:text-4xl font-extrabold text-white">AI-Based Student Training & Certification</p>
-            <p class="text-gray-400 max-w-2xl mx-auto mt-4">Hands-on, project-based AI and Machine Learning workshops for colleges and institutions.</p>
+            <p class="text-slate-300 max-w-2xl mx-auto mt-4">Hands-on, project-based AI and Machine Learning workshops for colleges and institutions.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl mb-6">
+            <div class="glossy-card p-8 rounded-2xl transition">
+                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
                     <i class="fa-solid fa-brain"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">AI & ML Bootcamps</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
+                <p class="text-sm text-slate-300 leading-relaxed">
                     Interactive 3-day to multi-week hands-on training on Python, Machine Learning models, Neural Networks, Computer Vision, and real-world deployment.
                 </p>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl mb-6">
+            <div class="glossy-card p-8 rounded-2xl transition">
+                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
                     <i class="fa-solid fa-id-card"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Certifications & Mentorship</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
+                <p class="text-sm text-slate-300 leading-relaxed">
                     Official completion certificates backed by industry experts, LinkedIn-integrated learning paths, and continuous code mentor guidance.
                 </p>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl mb-6">
+            <div class="glossy-card p-8 rounded-2xl transition">
+                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
                     <i class="fa-solid fa-rocket"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Career & Placement Support</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
+                <p class="text-sm text-slate-300 leading-relaxed">
                     AI-powered resume evaluation, mock interview training, and career roadmap guidance to prepare students for tech industry roles.
                 </p>
             </div>
@@ -117,38 +156,38 @@
     <!-- Pillar 2: Software & Web Services -->
     <section id="services" class="max-w-7xl mx-auto px-6 py-16">
         <div class="text-center mb-16">
-            <h2 class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-3">Pillar #2 • Software Engineering</h2>
+            <h2 class="text-xs font-bold text-sky-400 uppercase tracking-widest mb-3">Pillar #2 • Software Engineering</h2>
             <p class="text-3xl md:text-4xl font-extrabold text-white">Full-Stack Development & Digital Assets</p>
-            <p class="text-gray-400 max-w-2xl mx-auto mt-4">We design and build bespoke digital solutions for businesses, startups, and institutions.</p>
+            <p class="text-slate-300 max-w-2xl mx-auto mt-4">We design and build bespoke digital solutions for businesses, startups, and institutions.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-2xl mb-6">
+            <div class="glossy-card p-8 rounded-2xl transition">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Modern Websites & Web Apps</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
+                <p class="text-sm text-slate-300 leading-relaxed">
                     Custom web platforms, landing pages, and web applications built with modern frontend frameworks and clean UI design.
                 </p>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-2xl mb-6">
+            <div class="glossy-card p-8 rounded-2xl transition">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
                     <i class="fa-solid fa-file-invoice-dollar"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Client Proposals & Estimates</h3>
-                <p class="text-sm font-normal text-gray-400 leading-relaxed">
+                <p class="text-sm text-slate-300 leading-relaxed">
                     Automated corporate proposals, interactive tax & fee breakdowns, and professional billing integration.
                 </p>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-2xl mb-6">
+            <div class="glossy-card p-8 rounded-2xl transition">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
                     <i class="fa-solid fa-building-user"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Company Profiles & Portfolios</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
+                <p class="text-sm text-slate-300 leading-relaxed">
                     Digital company profile brochures, interactive portfolios, and official documentation tailored for pitch decks and clients.
                 </p>
             </div>
@@ -157,51 +196,51 @@
 
     <!-- Contact Section -->
     <section id="contact" class="max-w-5xl mx-auto px-6 py-20">
-        <div class="glass-card p-10 md:p-14 rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden">
+        <div class="glossy-card p-10 md:p-14 rounded-3xl relative overflow-hidden">
             <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <span class="text-xs font-bold text-blue-500 uppercase tracking-wider">Get In Touch</span>
+                    <span class="text-xs font-bold text-sky-400 uppercase tracking-wider">Get In Touch</span>
                     <h2 class="text-3xl font-extrabold text-white mt-2 mb-4">Let's Build Something Great Together</h2>
-                    <p class="text-sm text-gray-400 mb-8 leading-relaxed">
+                    <p class="text-sm text-slate-300 mb-8 leading-relaxed">
                         Whether you are an educational institution looking for AI training or a business needing custom web and software solutions, contact our expert team today.
                     </p>
 
-                    <div class="space-y-4 text-sm text-gray-300">
+                    <div class="space-y-4 text-sm text-slate-200">
                         <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-location-dot text-blue-400 w-5"></i>
+                            <i class="fa-solid fa-location-dot text-sky-400 w-5"></i>
                             <span>Pauls Heritage Building, Basel Mission Compound, Hubballi-Dharwad, KA - 580001</span>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-envelope text-blue-400 w-5"></i>
-                            <a href="mailto:Marvello.solutions0@gmail.com" class="hover:text-blue-400 transition">Marvello.solutions0@gmail.com</a>
+                            <i class="fa-solid fa-envelope text-sky-400 w-5"></i>
+                            <a href="mailto:Marvello.solutions0@gmail.com" class="hover:text-sky-300 transition">Marvello.solutions0@gmail.com</a>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-phone text-blue-400 w-5"></i>
-                            <a href="tel:+919611733270" class="hover:text-blue-400 transition">+91 9611733270</a>
+                            <i class="fa-solid fa-phone text-sky-400 w-5"></i>
+                            <a href="tel:+919611733270" class="hover:text-sky-300 transition">+91 9611733270</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800">
+                <div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-700/80 shadow-inner">
                     <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Marvello Solutions team will respond shortly.');">
                         <div>
-                            <label class="block text-xs font-semibold text-gray-400 mb-1">Full Name / Organization</label>
-                            <input type="text" placeholder="e.g. Institution Name / Client Name" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-sm text-white focus:border-blue-500 outline-none" required>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name / Organization</label>
+                            <input type="text" placeholder="e.g. Institution Name / Client Name" class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-sky-400 outline-none" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-400 mb-1">Email Address</label>
-                            <input type="email" placeholder="name@example.com" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-sm text-white focus:border-blue-500 outline-none" required>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+                            <input type="email" placeholder="name@example.com" class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-sky-400 outline-none" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-400 mb-1">Service Required</label>
-                            <select class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-sm text-gray-300 focus:border-blue-500 outline-none">
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Service Required</label>
+                            <select class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:border-sky-400 outline-none">
                                 <option>AI Training Program for Students</option>
                                 <option>Custom Website Development</option>
                                 <option>Company Profile & Portfolio Creation</option>
                                 <option>Software / Proposal Solutions</option>
                             </select>
                         </div>
-                        <button type="submit" class="w-full gradient-btn py-3 rounded-xl text-sm font-bold text-white shadow-lg shadow-blue-600/30 transition hover:scale-[1.02]">
+                        <button type="submit" class="w-full glossy-btn py-3 rounded-xl text-sm font-bold text-white transition hover:scale-[1.02]">
                             Send Inquiry
                         </button>
                     </form>
@@ -211,7 +250,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800/80 py-10 text-center text-xs text-gray-500">
+    <footer class="border-t border-slate-800 py-10 text-center text-xs text-slate-400">
         <p>© 2026 Marvello Solutions Pvt Ltd. All rights reserved.</p>
         <p class="mt-1">Empowering Future Through Technology • AI-Based Training & Mentorship</p>
     </footer>
