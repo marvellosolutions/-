@@ -121,34 +121,43 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glossy-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
-                    <i class="fa-solid fa-brain"></i>
+            <!-- Card 1 with Background Image -->
+            <div class="glossy-card p-8 rounded-2xl transition relative overflow-hidden group bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('card1.jpg');">
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI & ML Bootcamps</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Interactive 3-day to multi-week hands-on training on Python, Machine Learning models, Neural Networks, Computer Vision, and real-world deployment.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">AI & ML Bootcamps</h3>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                    Interactive 3-day to multi-week hands-on training on Python, Machine Learning models, Neural Networks, Computer Vision, and real-world deployment.
-                </p>
             </div>
 
-            <div class="glossy-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
-                    <i class="fa-solid fa-id-card"></i>
+            <!-- Card 2 with Background Image -->
+            <div class="glossy-card p-8 rounded-2xl transition relative overflow-hidden group bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('card2.jpg');">
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Certifications & Mentorship</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Official completion certificates backed by industry experts, LinkedIn-integrated learning paths, and continuous code mentor guidance.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Certifications & Mentorship</h3>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                    Official completion certificates backed by industry experts, LinkedIn-integrated learning paths, and continuous code mentor guidance.
-                </p>
             </div>
 
-            <div class="glossy-card p-8 rounded-2xl transition">
-                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
-                    <i class="fa-solid fa-rocket"></i>
+            <!-- Card 3 with Background Image -->
+            <div class="glossy-card p-8 rounded-2xl transition relative overflow-hidden group bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('card3.jpg');">
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 text-sky-300 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Career & Placement Support</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        AI-powered resume evaluation, mock interview training, and career roadmap guidance to prepare students for tech industry roles.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Career & Placement Support</h3>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                    AI-powered resume evaluation, mock interview training, and career roadmap guidance to prepare students for tech industry roles.
-                </p>
             </div>
         </div>
     </section>
@@ -222,23 +231,57 @@
                 </div>
 
                 <div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-700/80 shadow-inner">
-                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Marvello Solutions team will respond shortly.');">
+                    <form id="contactForm" class="space-y-4" onsubmit="sendEmail(event)">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name / Organization</label>
-                            <input type="text" placeholder="e.g. Institution Name / Client Name" class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-sky-400 outline-none" required>
+                            <input type="text" id="clientName" placeholder="e.g. Institution Name / Client Name" class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-sky-400 outline-none" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
-                            <input type="email" placeholder="name@example.com" class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-sky-400 outline-none" required>
+                            <input type="email" id="clientEmail" placeholder="name@example.com" class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-sky-400 outline-none" required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Service Required</label>
-                            <select class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:border-sky-400 outline-none">
+                            <select id="clientService" class="w-full bg-slate-950/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:border-sky-400 outline-none">
                                 <option>AI Training Program for Students</option>
                                 <option>Custom Website Development</option>
                                 <option>Company Profile & Portfolio Creation</option>
                                 <option>Software / Proposal Solutions</option>
                             </select>
+                        </div>
+                        <button type="submit" class="w-full glossy-btn py-3 rounded-xl text-sm font-bold text-white transition hover:scale-[1.02]">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-10 text-center text-xs text-slate-400">
+        <p>© 2026 Marvello Solutions Pvt Ltd. All rights reserved.</p>
+        <p class="mt-1">Empowering Future Through Technology • AI-Based Training & Mentorship</p>
+    </footer>
+
+    <!-- Form Handler Script -->
+    <script>
+    function sendEmail(event) {
+        event.preventDefault();
+        const name = document.getElementById('clientName').value;
+        const email = document.getElementById('clientEmail').value;
+        const service = document.getElementById('clientService').value;
+
+        const mailtoLink = `mailto:Marvello.solutions0@gmail.com?subject=New Service Inquiry: ${encodeURIComponent(service)}&body=${encodeURIComponent(
+            `Name/Organization: ${name}\nClient Email: ${email}\nRequested Service:${service}`
+        )}`;
+
+        window.location.href = mailtoLink;
+    }
+    </script>
+
+</body>
+</html>                            </select>
                         </div>
                         <button type="submit" class="w-full glossy-btn py-3 rounded-xl text-sm font-bold text-white transition hover:scale-[1.02]">
                             Send Inquiry
